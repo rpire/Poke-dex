@@ -4,7 +4,7 @@
   "description": "I'll add better description later...",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "watch": "webpack --watch",
     "start": "webpack serve --open",
     "build": "webpack"
@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/rpire/leaderboard#readme",
   "devDependencies": {
+    "@babel/plugin-transform-modules-commonjs": "^7.15.4",
     "babel-eslint": "^10.1.0",
     "css-loader": "^6.2.0",
     "eslint": "^7.32.0",
@@ -28,6 +29,7 @@
     "eslint-plugin-import": "^2.24.2",
     "hint": "^6.1.4",
     "html-webpack-plugin": "^5.3.2",
+    "jest": "^27.1.0",
     "lodash": "^4.17.21",
     "style-loader": "^3.2.1",
     "stylelint": "^13.13.1",
