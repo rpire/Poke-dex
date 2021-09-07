@@ -58,8 +58,12 @@ button:hover {
   margin: 0;
 }
 
-.card ul li,
 .nav-links li {
+  margin-right: 10px;
+}
+
+.nav-links li,
+.card ul li {
   display: inline-block;
   list-style: none;
 }
@@ -69,10 +73,6 @@ button:hover {
   padding: 5px 10px;
   border-radius: 5px;
   margin: 0 10px;
-}
-
-.nav-links li {
-  margin-right: 10px;
 }
 
 /* Cards Section Styling */
