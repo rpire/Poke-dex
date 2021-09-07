@@ -9,8 +9,9 @@ module.exports = {
       template: './src/index.html',
     }),
   ],
+  devtool: 'inline-source-map',
   devServer: {
-    contentBase: './dist',
+    static: './dist',
   },
   output: {
     filename: 'main.js',
