@@ -6,6 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Poke Dex Home Page</title>
+  <script src="https://kit.fontawesome.com/f8b4998ade.js" crossorigin="anonymous"></script>
 <script defer src="main.js"></script></head>
 
 <body>
@@ -25,8 +26,10 @@
   </header>
 
   <main>
-    <section id="card-section">
-   
+    <section>
+      <ul id="card-section">
+        
+      </ul>
     </section>
   </main>
 
@@ -41,17 +44,28 @@
     </p>
   </footer>
 
+<<<<<<< Updated upstream
 
+=======
   <!-- Modal -->
 
   <article class="modal invisible">
     <div class="modal-content">
-      <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png" class="modal-image" alt="Bulbasaur official artwork">
-      <i id="modal-cross" class="fas fa-times modal-cross" onclick="toggle()"></i>
+      <div class="img-frame">
+        <i id="modal-cross" class="fas fa-times modal-cross" onclick="toggle()"></i>
+        <div class="inner-frame">
+          <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png" class="modal-image" alt="Bulbasaur official artwork">
+        </div>
+      </div>
       <h3 id="pkm-name">Bulbasaur</h3>
-      <ul id="type-list" class="card-list">
+      <h4>Type</h4>
+      <ul id="type-list">
+        <li>Grass</li>
+        <li>Poison</li>
       </ul>
-      <p id="pkm-description">
+      <h4>Location</h4>
+      <p>
+        Cerulean City Area
       </p>
       <h4>Comments</h4>
       <ul id="comments" class="comments">
@@ -70,6 +84,7 @@
     </article>
 
   
+>>>>>>> Stashed changes
 </body>
 
 </html>
