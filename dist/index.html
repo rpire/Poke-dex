@@ -42,6 +42,34 @@
   </footer>
 
 
+  <!-- Modal -->
+
+  <article class="modal invisible">
+    <div class="modal-content">
+      <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png" class="modal-image" alt="Bulbasaur official artwork">
+      <i id="modal-cross" class="fas fa-times modal-cross" onclick="toggle()"></i>
+      <h3 id="pkm-name">Bulbasaur</h3>
+      <ul id="type-list" class="card-list">
+      </ul>
+      <p id="pkm-description">
+      </p>
+      <h4>Comments</h4>
+      <ul id="comments" class="comments">
+        <li>OMG!</li>
+        <li>A Bulbasaur</li>
+        <li>Use Vine Whip!</li>
+      </ul>
+      <h4>Add a comment</h4>
+      <form id="add-comment" class="add-comment">
+        <input type="text" name="name" id="name" placeholder="Your name">
+        <textarea name="comment" id="comment" cols="30" rows="10">Your comment</textarea>
+        <button type="button" id="submit-btn"></button>
+      </form> 
+    </div>
+   
+    </article>
+
+  
 </body>
 
 </html>
