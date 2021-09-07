@@ -12,7 +12,8 @@ body {
 }
 
 header,
-nav {
+nav,
+footer {
   display: flex;
   align-items: center;
 }
@@ -46,6 +47,15 @@ nav {
   list-style: none;
 }
 
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 90%;
+  height: 50px;
+  left: 5%;
+}
+
+footer a,
 .nav-links li a {
   text-decoration: none;
   color: #333;
@@ -53,6 +63,7 @@ nav {
   transition: 300ms ease-in-out;
 }
 
+footer a:hover,
 .nav-links li a:hover {
   border-bottom: 1px solid #333;
   opacity: 0.7;
@@ -76,6 +87,11 @@ nav {
   .nav-links li {
     margin-right: 40px;
   }
+
+  footer {
+    width: 80%;
+    left: 10%;
+  }
 }
 
 @media all and (min-width: 1024px) {
@@ -95,5 +111,10 @@ nav {
 
   .nav-links li a {
     font-size: 20px;
+  }
+
+  footer {
+    width: 70%;
+    left: 15%;
   }
 }
