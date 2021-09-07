@@ -65,6 +65,9 @@ button:hover {
 }
 
 .card ul li {
+  background-color: lightgray;
+  padding: 5px 10px;
+  border-radius: 5px;
   margin: 0 10px;
 }
 
