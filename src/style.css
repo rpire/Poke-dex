@@ -97,8 +97,14 @@ button:hover {
   padding: 0 15px;
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 20px;
   border-radius: 7px;
+}
+
+.card:hover {
+  border: 3px solid #333;
+  transform: scale(1.06);
+  transition: 500ms ease-in-out;
 }
 
 .card img {
@@ -289,6 +295,10 @@ footer a:hover,
 
   #card-section {
     grid-template-columns: repeat(3, 1fr);
+  }
+
+  .card:hover {
+    transform: scale(1.1);
   }
 
   .card img {
