@@ -234,6 +234,19 @@ footer a:hover,
   height: 100px;
 }
 
+.red {
+  border-color: red;
+}
+
+.error {
+  text-align: center;
+  color: maroon;
+  width: 80%;
+  height: 40px;
+  margin: auto;
+  margin-top: 20px;
+}
+
 /* -------------------------- */
 
 @media all and (min-width: 768px) {
