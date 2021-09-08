@@ -1,3 +1,5 @@
+import getComments from './comment.js';
+
 const popUp = (pokemon) => {
   const modal = document.createElement('article');
   modal.classList.add('modal');
@@ -60,7 +62,18 @@ const popUp = (pokemon) => {
 
   const comments = document.createElement('ul');
   comments.classList.add('comments');
-  comments.innerHTML = '<li>test comment</li>';
+  getComments(pokemon.name).then((pkmComments) => {
+    pkmComments.forEach((pkmComment) => {
+      const comment = document.createElement('li');
+      comment.innerHTML = `
+        ${pkmComment.creation_date} 
+        ${pkmComment.username}: 
+        ${pkmComment.comment}
+        `;
+      comments.appendChild(comment);
+    });
+  });
+  // comments.innerHTML = '<li>test comment</li>';
 
   const addCommentTitle = document.createElement('h4');
   addCommentTitle.innerHTML = 'Add a comment';
