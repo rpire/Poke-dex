@@ -128,10 +128,10 @@ footer a:hover,
   opacity: 0.7;
 }
 
-/* Temporary Style for Modals */
+/* Modals */
 
-.invisible {
-  display: none !important;
+.centering {
+  justify-content: center !important;
 }
 
 .modal {
@@ -172,6 +172,10 @@ footer a:hover,
   color: #fb8825;
 }
 
+.modal-cross:hover {
+  color: maroon;
+}
+
 .inner-frame {
   background-color: white;
   width: 250px;
@@ -185,14 +189,15 @@ footer a:hover,
   margin: auto;
 }
 
-#pkm-name {
+.pkm-name {
   font-size: 32px;
 }
 
-#type-list {
+.type-list {
   display: flex;
-  gap: 50px;
+  justify-content: space-between;
   list-style-type: none;
+  width: 25%;
 }
 
 .add-comment {
