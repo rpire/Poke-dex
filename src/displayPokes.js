@@ -23,6 +23,9 @@ const displayPokemon = (pokemon) => {
         const likesDiv = document.createElement('div');
         likesDiv.className = 'likes-div';
 
+        const likeImg = document.createElement('i');
+        likeImg.classList.add('fas', 'fa-heart', 'heart');
+
         const span = document.createElement('span');
         span.setAttribute('id', 'like');
 
@@ -49,6 +52,7 @@ const displayPokemon = (pokemon) => {
 
         outerLi.appendChild(pokeImg);
         outerLi.appendChild(h1);
+        likesDiv.appendChild(likeImg);
         likesDiv.appendChild(span);
         outerLi.appendChild(likesDiv);
         outerLi.appendChild(ul);
