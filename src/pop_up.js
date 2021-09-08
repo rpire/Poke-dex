@@ -1,4 +1,3 @@
-import { forEach } from 'lodash';
 import getComments from './comment.js';
 
 const popUp = (pokemon) => {
