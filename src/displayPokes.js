@@ -59,5 +59,4 @@ const displayPokemon = (pokemon) => {
   });
 };
 
-
 export default displayPokemon;
