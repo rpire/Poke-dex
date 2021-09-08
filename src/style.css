@@ -62,6 +62,12 @@ button:hover {
   margin-right: 10px;
 }
 
+.type-list li {
+  background-color: lightgray;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
 .nav-links li,
 .card ul li {
   display: inline-block;
@@ -143,7 +149,9 @@ footer a:hover,
 }
 
 .modal h4 {
-  margin-top: 20px;
+  font-size: 20px;
+  margin-top: 15px;
+  margin-bottom: 10px;
 }
 
 .modal-content {
@@ -151,17 +159,17 @@ footer a:hover,
   flex-direction: column;
   align-items: center;
   background: white;
-  height: 90vh;
+  height: 95vh;
   padding-bottom: 20px;
-  margin: 5vh 20vw;
+  margin: 2.5vh 2.5vw;
   border-radius: 15px;
   overflow-y: scroll;
 }
 
 .img-frame {
   position: relative;
-  background-color: #333;
   width: 100%;
+  box-shadow: 0 12px 16px 6px rgba(0, 0, 0, 0.2);
 }
 
 .modal-cross {
@@ -169,18 +177,19 @@ footer a:hover,
   top: 10%;
   right: 7.5%;
   font-size: 40px;
-  color: #fb8825;
+  color: #320064;
+  transition: 0.3s;
+  cursor: pointer;
 }
 
 .modal-cross:hover {
-  color: maroon;
+  color: purple;
 }
 
 .inner-frame {
   background-color: white;
   width: 250px;
   margin: auto;
-  border: 2px solid #333;
 }
 
 .modal-image {
@@ -191,23 +200,32 @@ footer a:hover,
 
 .pkm-name {
   font-size: 32px;
+  margin-top: 50px;
 }
 
 .type-list {
   display: flex;
   justify-content: space-between;
   list-style-type: none;
-  width: 25%;
+  width: 50%;
 }
 
 .add-comment {
   display: flex;
   flex-direction: column;
+  margin: auto;
+  width: 90%;
 }
 
 .modal input,
 .modal textarea {
-  margin-top: 20px;
+  margin-top: 15px;
+  width: 100%;
+  padding: 10px;
+}
+
+.modal textarea {
+  height: 100px;
 }
 
 /* -------------------------- */
@@ -243,6 +261,11 @@ footer a:hover,
     width: 80%;
     left: 10%;
   }
+
+  .modal-content {
+    height: 95vh;
+    margin: 2.5vh 10vw;
+  }
 }
 
 @media all and (min-width: 1025px) {
@@ -276,5 +299,30 @@ footer a:hover,
   footer {
     width: 70%;
     left: 15%;
+  }
+
+  .modal {
+    font-size: 18px;
+  }
+
+  .modal-content {
+    height: 90vh;
+    margin: 5vh 20vw;
+  }
+
+  .pkm-name {
+    font-size: 54px;
+  }
+
+  .modal h4 {
+    font-size: 28px;
+  }
+
+  .type-list {
+    width: 30%;
+  }
+
+  .add-comment {
+    width: 65%;
   }
 }

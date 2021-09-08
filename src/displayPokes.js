@@ -36,27 +36,5 @@ const displayPokemon = (pokemon) => {
         cardSection.appendChild(outerLi);
       });
   });
-  //   pokemon.forEach((pkm) => {
-  //   });
-  //   const btns = document.querySelectorAll('.btn');
-  //   console.log(btns);
 };
 export default displayPokemon;
-
-// const displayPokemon = (pokemon) => {
-//   const cardSection = document.getElementById('card-section');
-//   const pokemonTypes = pokemon.types;
-//   const pokemonImage = pokemon.sprites.other;
-
-//   const outerLi = document.creatElement('li');
-//   outerLi.classList.add('card');
-
-//   const img = document.createElement('img');
-//   img.setAttribute('src', pokemonImage);
-//   img.setAttribute('alt', 'Pokemon');
-
-//   const cardTitle = document.createElement('h1');
-//   cardTitle.innerHTML = pokemon.name;
-
-//   for
-// }
