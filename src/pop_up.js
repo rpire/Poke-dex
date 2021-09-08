@@ -1,4 +1,5 @@
-import getComments from './comment.js';
+import getComments from './get_comment.js';
+import postComments from './post_comments.js';
 
 const popUp = (pokemon) => {
   const modal = document.createElement('article');
@@ -62,18 +63,23 @@ const popUp = (pokemon) => {
 
   const comments = document.createElement('ul');
   comments.classList.add('comments');
-  getComments(pokemon.name).then((pkmComments) => {
-    pkmComments.forEach((pkmComment) => {
-      const comment = document.createElement('li');
-      comment.innerHTML = `
-        ${pkmComment.creation_date} 
-        ${pkmComment.username}: 
-        ${pkmComment.comment}
-        `;
-      comments.appendChild(comment);
+
+  const showComments = () => {
+    comments.innerHTML = '';
+    getComments(pokemon.name).then((pkmComments) => {
+      pkmComments.forEach((pkmComment) => {
+        const comment = document.createElement('li');
+        comment.innerHTML = `
+          ${pkmComment.creation_date} 
+          ${pkmComment.username}: 
+          ${pkmComment.comment}
+          `;
+        comments.appendChild(comment);
+      });
     });
-  });
-  // comments.innerHTML = '<li>test comment</li>';
+  };
+
+  showComments();
 
   const addCommentTitle = document.createElement('h4');
   addCommentTitle.innerHTML = 'Add a comment';
@@ -92,10 +98,31 @@ const popUp = (pokemon) => {
   textArea.setAttribute('id', 'comment');
   textArea.setAttribute('placeholder', 'Your Comment');
 
+  const msg = document.createElement('small');
+  msg.classList.add('error');
+  msg.innerHTML = '';
+
   const submitBtn = document.createElement('button');
   submitBtn.setAttribute('type', 'button');
   submitBtn.setAttribute('id', 'submit-btn');
   submitBtn.innerHTML = 'Submit';
+  submitBtn.addEventListener('click', () => {
+    if (nameInput.value.length < 1 || nameInput.value.length > 8) {
+      nameInput.classList.add('red');
+      textArea.classList.remove('red');
+      msg.innerHTML = '*Your name should have between 1 and 8 characters*';
+    } else if (textArea.value.length < 5 || textArea.value.length > 100) {
+      nameInput.classList.remove('red');
+      textArea.classList.add('red');
+      msg.innerHTML = 'Comment should have between 5 and 100 characters';
+    } else {
+      postComments(nameInput.value, textArea.value, pokemon.name)
+        .then(() => (getComments(pokemon.name)).then(() => showComments()));
+      nameInput.classList.remove('red');
+      textArea.classList.remove('red');
+      addComment.reset();
+    }
+  });
 
   innerFrame.appendChild(img);
 
@@ -109,6 +136,7 @@ const popUp = (pokemon) => {
 
   addComment.appendChild(nameInput);
   addComment.appendChild(textArea);
+  addComment.appendChild(msg);
   addComment.appendChild(submitBtn);
 
   modalContent.appendChild(imgFrame);
