@@ -1,4 +1,12 @@
 import './style.css';
 import fetchApi from './fetchApi.js';
+import displayPokemon from './displayPokes.js';
+import itemsCounter from './itemCounter.js';
 
-window.onload = fetchApi;
+const pokeTitle = document.querySelector('.poke-title');
+
+window.addEventListener('load', async () => {
+  const res = await fetchApi();
+  pokeTitle.innerHTML = `Pokemon(${itemsCounter(res.results)})`;
+  await displayPokemon(res.results);
+});
