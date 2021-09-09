@@ -205,8 +205,8 @@ footer a:hover,
 }
 
 .modal-cross {
-  position: absolute;
-  top: 10%;
+  position: fixed;
+  top: 4%;
   right: 7.5%;
   font-size: 40px;
   color: #320064;
@@ -310,6 +310,11 @@ footer a:hover,
     height: 95vh;
     margin: 2.5vh 10vw;
   }
+
+  .modal-cross {
+    top: 5%;
+    right: 15%;
+  }
 }
 
 @media all and (min-width: 1025px) {
@@ -356,6 +361,11 @@ footer a:hover,
   .modal-content {
     height: 90vh;
     margin: 5vh 20vw;
+  }
+
+  .modal-cross {
+    top: 7.5%;
+    right: 23%;
   }
 
   .pkm-name {
