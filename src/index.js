@@ -8,6 +8,5 @@ const pokeTitle = document.querySelector('.poke-title');
 window.addEventListener('load', async () => {
   const res = await fetchApi();
   pokeTitle.innerHTML = `Pokemon(${itemCounter(res.results)})`;
-  console.log(res.results);
   await displayPokemon(res.results);
 });
