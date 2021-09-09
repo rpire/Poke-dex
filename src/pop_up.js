@@ -1,3 +1,4 @@
+import { commentCounter } from './counters.js';
 import getComments from './get_comment.js';
 import postComments from './post_comments.js';
 
@@ -67,15 +68,17 @@ const popUp = (pokemon) => {
   const showComments = () => {
     comments.innerHTML = '';
     getComments(pokemon.name).then((pkmComments) => {
-      pkmComments.forEach((pkmComment) => {
+      for (let i = 0; i < pkmComments.length; i += 1) {
         const comment = document.createElement('li');
+        const pkmComment = pkmComments[i];
         comment.innerHTML = `
           ${pkmComment.creation_date} 
           ${pkmComment.username}: 
           ${pkmComment.comment}
           `;
         comments.appendChild(comment);
-      });
+      }
+      commentCounter(pkmComments, commentsTitle, comments);
     });
   };
 
