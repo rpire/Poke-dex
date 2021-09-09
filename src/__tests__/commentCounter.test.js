@@ -4,9 +4,6 @@
 import { commentCounter } from '../counters.js';
 
 describe('Check comment length for a pokemon card', () => {
-  // const title = document.createElement('h4');
-  // const list = document.createElement('ul');
-
   test('3 comments', () => {
     const title = document.createElement('h4');
     const list = document.createElement('ul');
