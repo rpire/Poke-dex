@@ -1,7 +1,7 @@
 import './style.css';
-import fetchApi from './modules/fetchApi.js';
-import displayPokemon from './modules/displayPokes.js';
-import itemsCounter from './modules/itemCounter.js';
+import fetchApi from './fetchApi.js';
+import displayPokemon from './displayPokes.js';
+import itemsCounter from './itemCounter.js';
 
 const pokeTitle = document.querySelector('.poke-title');
 
